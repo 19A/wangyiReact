@@ -9,35 +9,91 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1445882_qz9spxz5qdc.css">
+    <link rel="stylesheet" href="./static/index.styl">
+    <title>网易严选</title>
   </head>
+    <!-- <script src="https://unpkg.com/swiper/js/swiper.js"> </script> -->
+    <!-- <script src="https://unpkg.com/better-scroll/dist/bscroll.min.js"></script> -->
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root" style="width: 100%;height:100%;">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    </div>
   </body>
+  <script>
+     window.onload=function () {
+          document.addEventListener('click', function(e) {
+             e.preventDefault();
+          });
+
+          if ('addEventListener' in document) {
+              document.addEventListener('DOMContentLoaded', function () {
+                FastClick.attach(document.body);
+            }, false);
+          }
+
+//          点击显示对应主界面
+          //获取所有footer/content节点、
+          // const footerItems= window.document.querySelectorAll(".footer-item")
+          // // const pageItems= window.document.querySelectorAll("#app .page>div")
+          // //遍历绑定事件
+          // footerItems.forEach((item,i)=>{
+          //   item.addEventListener("click",()=>{
+          //       footerItems.forEach((item,i)=>{
+          //           //排他
+          //           item.classList.remove("active")
+          //           // console.log(pageItems[i])
+          //           // pageItems[i].classList.remove("active")
+          //       })
+          //       //当前高亮
+          //       item.classList.add("active")
+          //       // pageItems[i].classList.add("active")
+          //   })
+          // })
+
+          //点击显示对应导航条
+          //获取所有footer/content节点、
+        //   const navActives= window.document.querySelectorAll(".nav-list .nav-item a")
+        //   const navItems= window.document.querySelectorAll(".nav-list .nav-item")
+          //遍历绑定事件
+        //   navItems.forEach((item,i)=>{
+        //       item.addEventListener("click",()=>{
+        //           navActives.forEach((item,i)=>{
+        //               //排他
+        //               item.classList.remove("nav-active")
+        //           })
+        //           //当前高亮
+        //           navActives[i].classList.add("nav-active")
+
+        //       })
+        //   })
+          //点击显示导航列表
+        //   const toggleArrow=window.document.querySelector(".header-nav .toggle-arrow")
+        //   const navBox=window.document.querySelector(".header-nav .nav-box")
+        //   const wrapper=window.document.querySelector(".header-nav .wrapper")
+        //   console.log(toggleArrow,navBox)
+        //   toggleArrow.addEventListener("click",()=>{
+        //       toggleArrow.classList.toggle("arrowDown")
+        //       navBox.classList.toggle("wrapper-active")
+        //       wrapper.classList.toggle("wrapper-native")
+        //   })
+          //swiper
+        //   var mySwiper = new Swiper ('.swiper-container', {
+        //       direction: 'horizontal', // 垂直切换选项
+        //       loop: true, // 循环模式选项
+        //       // 如果需要分页器
+        //       pagination: {
+        //         el: '.swiper-pagination',
+        //       },
+        //   })
+
+        //   let scroll = new BScroll('.wrapper',{
+        //         scrollX : true,
+        //         click: true
+        //   })
+      } 
+  </script>
 </html>
