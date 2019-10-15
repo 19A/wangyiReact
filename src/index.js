@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import 'lib-flexible/flexible'
 import './css/index.styl';
 import App from './App';
+import "./mock/mock-server";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App/>, document.getElementById('root'));

@@ -8,53 +8,40 @@ import Profile from "../../pages/profile";
 import  "./css/index.styl";
 
 export default class Footer extends Component {
-
-  
   render() {
     return (
-      <div className="page">
-        <BrowserRouter>
-          <Switch>
-            <Route path="/category" component={Category}></Route>
-            <Route path="/reco" component={Reco}></Route>
-            <Route path="/cart" component={Cart}></Route>
-            <Route path="/profile" component={Profile}></Route>
-            <Route path="/home" component={Home}></Route>
-            <Redirect to="/home"/>
-          </Switch>
-        </BrowserRouter >
+      // <div className="footer-container">
       <div className="footer">
-
-          <div className="footer-list">
-            <NavLink className="footer-item" to="/home" 
-            ref="home">
-              <i className="iconfont iconshouye"></i>
-              <span>首页</span>
-            </NavLink>
-            <NavLink className="footer-item"  to="/category"
+        <div className="footer-list">
+          <NavLink className="footer-item" to="/home" 
+          ref="home">
+            <i className="iconfont iconshouye"></i>
+            <span>首页</span>
+          </NavLink>
+          <NavLink className="footer-item"  to="/category"
+          ref="cate">
+            <i className="iconfont iconleimupinleifenleileibie"></i>
+            <span>分类</span>
+          </NavLink>
+          <NavLink to="/reco" className="footer-item"
             ref="cate">
-              <i className="iconfont iconleimupinleifenleileibie"></i>
-              <span>分类</span>
-            </NavLink>
-            <NavLink to="/reco" className="footer-item"
-              ref="cate">
-              <i className="iconfont iconliaojiemodou"></i>
-              <span>识物</span>
-            </NavLink>
-            <NavLink to="/cart" className="footer-item"
-              ref="cart">
-              <i className="iconfont icongouwuche"
-              ></i>
-              <span>购物车</span>
-            </NavLink>
-            <NavLink to="/profile" className="footer-item"
-               ref="proflie">
-              <i className="iconfont icongeren"></i>
-              <span>个人</span>
-            </NavLink>
-          </div>
+            <i className="iconfont iconliaojiemodou"></i>
+            <span>识物</span>
+          </NavLink>
+          <NavLink to="/cart" className="footer-item"
+            ref="cart">
+            <i className="iconfont icongouwuche"
+            ></i>
+            <span>购物车</span>
+          </NavLink>
+          <NavLink to="/profile" className="footer-item"
+              ref="proflie">
+            <i className="iconfont icongeren"></i>
+            <span>个人</span>
+          </NavLink>
+        </div>
         </div >
-      </div>
+      // </div>
     )
   }
 }
